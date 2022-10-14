@@ -6,7 +6,16 @@
     color: white;
     list-style: none;
 }
-
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #3f4043;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #1e1eff;
+    border-radius: 5px;
+}
 /*--------------- for test ------------------*/
 
 /* div, header, nav, main, aside, footer{
@@ -131,8 +140,9 @@ header form input[type=text]:focus{
     z-index: 1;
     min-width: 200px;
     width: 17%;
+    margin-top: 41px;
     left: 75.5%;
-    top: 180px;
+    top: calc(180px - 41px);
     background-color: #000078;
 }
 #connected ul{
