@@ -1,0 +1,11 @@
+<?php
+require('src/switchPath.php');
+require('src/sessionCtrl.php');
+require('src/fonct.php');
+require('src/connexion/fonctconnect.php');
+require('src/connexion/pushToSession.php');
+require('src/reqsql.php');
+require('templates/head.php');
+require('templates/mpages/mConnexion.php');
+require('templates/footer.php');
+?>

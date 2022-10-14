@@ -1,0 +1,299 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Lato ,roboto, sans-serif;
+    font-size: 1em;
+    color: white;
+    list-style: none;
+}
+
+/*--------------- for test ------------------*/
+
+/* div, header, nav, main, aside, footer{
+    border: 1px solid black;
+} */
+
+/*------------ end for test ------------------*/
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #181a1d;
+}
+#maincontainer{
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+/* header */
+div.fullheaderdiv{
+    height: 105px;
+    width: 100%;
+    position: relative;
+    background-color: #181a1d;
+    
+}
+.headerdiv{
+    width: 85%;
+    height: 100px;
+    margin: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.imglogo img{
+    height: 100px;
+}
+nav{
+    height: 75px;
+    background: linear-gradient(#181a1d, #181a1d, #000078);
+    border-bottom: 1px solid #3f4043;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2px);
+    height: 40px;
+    border-top: 1px solid #000078;
+    border-right: 1px solid #000078;
+    border-left: 1px solid #000078;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li:hover a{
+    color: #1e1eff;
+}
+nav ul li:hover{
+    box-shadow: inset 0 0 1em #000078;
+}
+ul li.green{
+    border-top: 1px solid green;
+    border-right: 1px solid green;
+    border-left: 1px solid green;
+    background: linear-gradient(#181a1d, green, green);
+}
+ul li.green:hover{
+    transition: 0.3s;
+    box-shadow: inset 0 0 1em green;
+}
+ul li.green:hover a{
+    color: white;
+    text-decoration: underline;
+}
+/* Searchbar */
+header form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+header form input[type=text]{
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-image: url('../assets/imgsite/searchicon_white.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    height: 30px;
+    background-color: #3f4043;
+}
+header form input[type=text]:focus{
+    transition: 0.2s;
+    width: 300px;
+    outline: none;
+    border: 2px solid #1e1eff;
+}
+/* ---  Nav User --- */
+#connected{
+    background-color: #181a1d;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    width: 17%;
+    left: 75.5%;
+    top: 180px;
+    background-color: #000078;
+}
+#connected ul{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#connected ul li{
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #181a1d;
+    background: linear-gradient(#181a1d, #000078);
+}
+/* header form button{
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 30px;
+    background-color: #181a1d;
+    color: #181a1d;
+}
+header form button img{
+    height: 30px;
+} */
+/* end Searchbar */
+
+/* end header */
+/* main */
+div.fullbodydiv{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 105px - 200px);
+    /* margin-bottom: 200px; */
+    background-color: #181a1d;
+}
+div.bodydiv{
+    width: 85%;
+    margin: auto;
+    min-height: calc(100vh - 175px - 200px);
+    display: flex;
+    flex-direction: row;
+}
+/* btn barre */
+div.jsBtn{
+    width: 75%;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+div.btn{
+    width: 40px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+    background-color: #3f4043;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+div.btn.active{
+    transition: 1s;
+    justify-content: end;
+
+}
+div.btn span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 1px;
+    border-radius: 6px;
+    background-color: #1e1eff;
+}
+div.btn:hover span{
+    width: 16px;
+    height: 16px;
+    margin: 0 -1px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+/* end btn barre */
+.bodydiv main{
+    width: calc(100% - 250px)
+}
+.mainsection{
+    width: 95%;
+    background-color: #000078;
+    min-height: 40px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 1px;
+    box-shadow: 1px 1px 2px black;
+}
+.mainsection article{
+    background-color: #242629;
+    min-height: 60px;
+    margin: auto; 
+}
+.bodydiv aside{
+    width: 250px;
+}
+.asidecard{
+    width: 100%;
+    margin-top: 20px;
+    min-height: 40px;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 4px;
+    background-color: #242629;
+}
+.containercard{
+    width: 100%;
+    min-height: 69px;
+    border-top: 1px solid #3f4043;
+}
+/* end main */
+/* footer */
+
+div.fullfooterdiv{
+    height: 200px;
+    width: 100%;
+    /* position: relative; */
+    /* left: 0;
+    bottom: 0; */
+    background-color: #181a1d;
+}
+div.footerdiv{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #1e1eff;
+    border-bottom: none;
+    width: 85%;
+    margin: auto;
+    height: 100%;
+    /* background-color: rgb(0, 161, 161); */
+}
+footer, .tfooter, .bfooter{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+footer{
+    height: 50%;
+    border-bottom: 1px solid #1e1eff;
+}
+.tfooter, .bfooter{
+    height: 25%;
+
+    border-bottom: 1px solid #1e1eff;
+}
+
+/* end footer */
