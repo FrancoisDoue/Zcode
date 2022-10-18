@@ -1,5 +1,5 @@
 let redirCount = document.getElementById('redirCount')
-let cpt = 6
+let cpt = 4
 function decompte(){
     if(cpt > 0){
         cpt--
@@ -16,6 +16,7 @@ window.addEventListener('load',function(){
         inputs.forEach(input => {
             input.addEventListener('focus',function(){
                 this.value = '';
+                this.setAttribute('class', '');
             })
         });
     }

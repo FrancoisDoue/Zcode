@@ -44,7 +44,7 @@ if(isset($_GET['connect'])){
             <?php
             ConnectAndPush($arrayConnect[1]->pswuser);
             unset($_POST);
-            header('Refresh: 5; url=index');
+            header('Refresh: 3; url=index');
             }else{
                 $_SESSION['error_connect'] = array('<span class="red">Pseudo ou mot de passe incorrect</span><br><br>',$_POST['usname'],$_POST['psw'],'red');
                 unset($_POST);

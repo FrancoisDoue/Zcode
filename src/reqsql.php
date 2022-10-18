@@ -1,4 +1,5 @@
 <?php
+// get password for connexion
 function getPws($username){
     $usernm = htmlspecialchars($username);
     $req = 'SELECT `id_user`,`pswuser`
@@ -6,17 +7,26 @@ function getPws($username){
             WHERE `username` = "'.$usernm.'";';
     return array($req,$usernm);
 }
+//-------------------------
+//
+// get the role for the connexion
 function verifRole($id){
     $req = 'SELECT `id_role`
             FROM `possede`
             WHERE id_user ='.$id.';';
     return $req;
 }
+//---------------------------
+//
+// setting role for a first connexion
 function isInvite(){
     $req = 'INSERT INTO `possede`(`id_user`,`id_role`)
             VALUES(:ID,2)';
     return $req;
 }
+// --------------------------
+//
+//get info for setting the session
 function sqlReqInfo($usname,$psw,$getCryptedPsw){
     define('GETUSERINFO','  SELECT `pswuser`, `username`, `cod_role`, `lib_role`
                             FROM `possede`
@@ -26,8 +36,23 @@ function sqlReqInfo($usname,$psw,$getCryptedPsw){
                             AND '.password_verify($psw,$getCryptedPsw).';');
     return GETUSERINFO; 
 }
+//---------------------------
+//
 function sqlInscr(){
     $req = 'INSERT INTO `user`(`username`,`nomuser`,`prenomuser`,`mailuser`,`pswuser`,`inscruser`)
             VALUES (:PSEUDO, :NOM, :PRENOM, :MAIL, :PSW, CURRENT_TIMESTAMP)';
     return $req;
 }
+//connexion for admin
+function sqlAdm($usname,$mail){
+    $req = 'SELECT `username`,`mailuser`,`pswuser`
+            FROM `possede`
+            NATURAL JOIN `user`
+            NATURAL JOIN `role`
+            WHERE `cod_role` = "ADM" 
+            AND `username` = "'.$usname.'"
+            AND `mailuser` = "'.$mail.'";';
+    return $req;
+}
+// ---------------------
+//

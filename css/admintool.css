@@ -1,0 +1,15 @@
+#sideAdm ul{
+    min-width: 150px;
+}
+#sideAdm ul li a{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #1e1eff;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 2px;
+    border: 1px solid #3f4043;
+    border-radius: 4px;
+}

@@ -7,7 +7,8 @@ function switchPath(){
         case 'admintool.php':
             $addHead = '
                 <link rel="stylesheet" href="css/inscr_connect.css">
-                <title>Zcode - Connexion</title>
+                <link rel="stylesheet" href="css/admintool.css">
+                <title>Zcode - Administration</title>
             ';
             break;
         case 'connexion.php':
