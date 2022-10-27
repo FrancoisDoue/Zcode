@@ -56,3 +56,12 @@ function sqlAdm($usname,$mail){
 }
 // ---------------------
 //
+function getUserInfo($user){
+    $req = 'SELECT `username`,`nomuser`,`prenomuser`,`mailuser`,`pswuser`,`teluser`,`inscruser`,`lib_role`,`nam_img`
+            FROM `user`
+            NATURAL JOIN `possede`
+            NATURAL JOIN `role`
+            NATURAL JOIN `images`
+            WHERE username = "'.htmlspecialchars($user).'";';
+    return $req;
+}

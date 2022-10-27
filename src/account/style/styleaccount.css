@@ -1,0 +1,45 @@
+div.bodydiv{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #1e1eff;
+    min-height: 1200px;
+}
+#asideProfile{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-right: 1px solid #1e1eff;
+    width: 25%;
+    height: 100%;
+}
+#mainProfile{
+    width: 75%;
+    height: 100%;
+}
+#imgPro{
+    width: 100%;
+    height: 30%;
+    min-height: 300px;
+}
+#linksPro{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px solid #1e1eff;
+    width: 100%;
+    height: 70%;
+    min-height: 900px;
+}
+#infoPro{
+    width: 100%;
+    height: 50%;
+}
+#histoPro{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border-top: 1px solid #1e1eff;
+}

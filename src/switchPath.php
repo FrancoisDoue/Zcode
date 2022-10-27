@@ -4,6 +4,13 @@ function switchPath(){
     $getURI = end($getURI);
     $addHead = '';
     switch($getURI){
+        case 'account.php':
+            $addHead = '
+            <script defer src="script/accueil.js"></script>
+            <link rel="stylesheet" href="src\account\style\styleaccount.css">
+            <title>Zcode - Accueil</title>
+        ';
+            break;
         case 'admintool.php':
             $addHead = '
                 <link rel="stylesheet" href="css/inscr_connect.css">
